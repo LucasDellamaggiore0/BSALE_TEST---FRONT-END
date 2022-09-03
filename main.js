@@ -2,7 +2,7 @@ const d = document
 
 //! Llamado con fetch para traer todos los productos
 async function getProducts() {
-    let data = await fetch('http://localhost:3000/')
+    let data = await fetch('https://bsale-apib.herokuapp.com/')
     let dataJSON = await data.json()
     let dataArray = await dataJSON.products
     return dataArray
@@ -11,13 +11,13 @@ async function getProducts() {
 //! Llamado con fectch para traer todas las categorías
 
 async function getCategories() {
-    await fetch('http://localhost:3000/categories')
+    await fetch('https://bsale-apib.herokuapp.com/categories')
         .then(res => res.json())
         .then(data => renderSelectCategories(data.categories))
 }
 
 async function getProductsByCategory(id) {
-    let data = await fetch(`http://localhost:3000/?category=${id}`)
+    let data = await fetch(`https://bsale-apib.herokuapp.com/?category=${id}`)
     let dataJSON = await data.json()
     let dataArray = await dataJSON.products
     // return dataArray
@@ -26,7 +26,7 @@ async function getProductsByCategory(id) {
 }
 
 async function searchProducts(name) {
-    let data = await fetch(`http://localhost:3000/?name=${name}`)
+    let data = await fetch(`https://bsale-apib.herokuapp.com/?name=${name}`)
     let dataJSON = await data.json()
     let dataArray = await dataJSON.products
     return dataArray
