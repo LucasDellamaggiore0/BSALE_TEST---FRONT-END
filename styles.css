@@ -7,8 +7,6 @@
     align-items: center;
 }
 
-
-
 .product-card{
     width: 30%;
     height: 10%;
@@ -32,4 +30,12 @@
 .product-card p{
     font-weight: bold;
     font-size: 30px;
+}
+
+.form-control{
+    width: 50%;
+}
+
+#categories{
+    text-transform: capitalize;
 }
